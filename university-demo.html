@@ -9,74 +9,112 @@
 
   <style>
     :root {
-      --azul-profundo: #070C2A;
-      --dorado: #D6B15A;
-      --blanco: #FFFFFF;
-      --gris: #CFCFD6;
+      --azul-profundo:#070C2A;
+      --dorado:#D6B15A;
+      --blanco:#FFFFFF;
+      --gris:#CFCFD6;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--azul-profundo);
-      color: var(--blanco);
-      min-height: 100vh;
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--azul-profundo);
+      color:var(--blanco);
+      min-height:100vh;
     }
 
-    nav {
-      padding: 18px;
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    nav{
+      padding:18px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.1);
     }
 
-    nav a {
-      color: var(--dorado);
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-      font-size: 14.5px;
+    nav a{
+      color:var(--dorado);
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:500;
+      font-size:14.5px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    header{
+      max-width:1000px;
+      margin:auto;
+      padding:50px 24px 20px;
+      text-align:center;
     }
 
-    header {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 24px 30px;
-      text-align: center;
+    header h1{
+      color:var(--dorado);
+      font-size:28px;
+      margin-bottom:12px;
     }
 
-    header h1 {
-      color: var(--dorado);
-      font-size: 28px;
-      margin-bottom: 12px;
+    header p{
+      color:var(--gris);
+      font-size:15px;
+      max-width:820px;
+      margin:auto;
+      line-height:1.6;
     }
 
-    header p {
-      color: var(--gris);
-      font-size: 15px;
-      max-width: 820px;
-      margin: auto;
-      line-height: 1.6;
+    section{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 24px 60px;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 13px;
-      color: var(--gris);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin-top: 60px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.06);
+      border-radius:16px;
+      padding:26px;
+      box-shadow:0 18px 40px rgba(0,0,0,.45);
+      text-align:center;
+    }
+
+    .card h3{
+      color:var(--dorado);
+      font-size:17px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--gris);
+      font-size:14px;
+      margin-bottom:16px;
+      line-height:1.5;
+    }
+
+    .card a{
+      display:block;
+      padding:12px;
+      border-radius:10px;
+      background:var(--dorado);
+      color:#1A1A1A;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      font-size:13px;
+      color:var(--gris);
+      border-top:1px solid rgba(255,255,255,.08);
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVEGACIÓN CANÓNICA -->
 <nav>
   <a href="https://gustpuert.github.io/magicbank--demo/">Inicio DEMO</a> |
   <a href="https://gustpuert.github.io/magicbank--demo/university-demo.html">University</a> |
@@ -87,14 +125,60 @@
 <header>
   <h1>MagicBank University · DEMO</h1>
   <p>
-    Recorrido demostrativo por las facultades universitarias de MagicBank.
-    Aquí conoces la estructura académica, el acompañamiento tutorial
-    y el enfoque formativo antes de acceder a la plataforma real.
+    Universidad demostrativa de MagicBank. Explora las facultades
+    y conoce cómo funcionan los tutores académicos antes de acceder
+    a la plataforma real.
   </p>
 </header>
 
+<section>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Administración y Negocios</h3>
+      <p>Gestión, liderazgo, economía y estrategia empresarial.</p>
+      <a href="https://chatgpt.com/g/g-696695cb43b881919fb7f68b33994341-superadministrador-tutor-pro" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Derecho</h3>
+      <p>Formación jurídica con acompañamiento tutorial.</p>
+      <a href="https://chatgpt.com/g/g-696699828448819189b8d55c1ec914c7-tutor-de-derecho-abogadus-tutor-pro" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Contaduría</h3>
+      <p>Contabilidad, impuestos y control financiero.</p>
+      <a href="https://chatgpt.com/g/g-6966a3b3f8f881919cc1030e8f9f81d7-tutor-de-contaduria-supercontador-tutor-pro" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Marketing Digital</h3>
+      <p>Estrategias digitales y crecimiento online.</p>
+      <a href="https://chatgpt.com/g/g-6966a4b9cf208191b7cba7845a3afbc9-tutor-de-marketing-supermarketer" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Desarrollo de Software</h3>
+      <p>Programación y soluciones tecnológicas.</p>
+      <a href="https://chatgpt.com/g/g-6966a44de3a08191ad6c8c0d5a05d806-tutor-de-desarrollo-de-software-superdesarrollador" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+  </div>
+</section>
+
 <footer>
-  MagicBank University · Plataforma DEMO · Sin acceso a tutores reales
+  MagicBank University · Plataforma DEMO · Sin tutores reales
 </footer>
 
 </body>
