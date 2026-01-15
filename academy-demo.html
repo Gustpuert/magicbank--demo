@@ -9,74 +9,112 @@
 
   <style>
     :root {
-      --azul-profundo: #070C2A;
-      --dorado: #D6B15A;
-      --blanco: #FFFFFF;
-      --gris: #CFCFD6;
+      --azul-profundo:#070C2A;
+      --dorado:#D6B15A;
+      --blanco:#FFFFFF;
+      --gris:#CFCFD6;
     }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background-color: var(--azul-profundo);
-      color: var(--blanco);
-      min-height: 100vh;
+    body{
+      font-family:'Inter',sans-serif;
+      background:var(--azul-profundo);
+      color:var(--blanco);
+      min-height:100vh;
     }
 
-    nav {
-      padding: 18px;
-      text-align: center;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
+    nav{
+      padding:18px;
+      text-align:center;
+      border-bottom:1px solid rgba(255,255,255,.1);
     }
 
-    nav a {
-      color: var(--dorado);
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 500;
-      font-size: 14.5px;
+    nav a{
+      color:var(--dorado);
+      text-decoration:none;
+      margin:0 10px;
+      font-weight:500;
+      font-size:14.5px;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    header{
+      max-width:1000px;
+      margin:auto;
+      padding:50px 24px 20px;
+      text-align:center;
     }
 
-    header {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 24px 30px;
-      text-align: center;
+    header h1{
+      color:var(--dorado);
+      font-size:28px;
+      margin-bottom:12px;
     }
 
-    header h1 {
-      color: var(--dorado);
-      font-size: 28px;
-      margin-bottom: 12px;
+    header p{
+      color:var(--gris);
+      font-size:15px;
+      max-width:820px;
+      margin:auto;
+      line-height:1.6;
     }
 
-    header p {
-      color: var(--gris);
-      font-size: 15px;
-      max-width: 820px;
-      margin: auto;
-      line-height: 1.6;
+    section{
+      max-width:1000px;
+      margin:auto;
+      padding:40px 24px 60px;
     }
 
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      font-size: 13px;
-      color: var(--gris);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      margin-top: 60px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:22px;
+    }
+
+    .card{
+      background:rgba(255,255,255,.06);
+      border-radius:16px;
+      padding:26px;
+      box-shadow:0 18px 40px rgba(0,0,0,.45);
+      text-align:center;
+    }
+
+    .card h3{
+      color:var(--dorado);
+      font-size:17px;
+      margin-bottom:10px;
+    }
+
+    .card p{
+      color:var(--gris);
+      font-size:14px;
+      margin-bottom:16px;
+      line-height:1.5;
+    }
+
+    .card a{
+      display:block;
+      padding:12px;
+      border-radius:10px;
+      background:var(--dorado);
+      color:#1A1A1A;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      font-size:13px;
+      color:var(--gris);
+      border-top:1px solid rgba(255,255,255,.08);
     }
   </style>
 </head>
 
 <body>
 
-<!-- NAVEGACIÓN CANÓNICA -->
 <nav>
   <a href="https://gustpuert.github.io/magicbank--demo/">Inicio DEMO</a> |
   <a href="https://gustpuert.github.io/magicbank--demo/university-demo.html">University</a> |
@@ -87,14 +125,51 @@
 <header>
   <h1>MagicBank Academy · DEMO</h1>
   <p>
-    Formación práctica y aplicada: idiomas, habilidades profesionales
-    y cursos especializados. Todos los cursos enlazan a tutores
-    demostrativos para conocer la experiencia antes de comprar.
+    Academia práctica de MagicBank. Cursos cortos, idiomas
+    y habilidades aplicadas, todos guiados por tutores demostrativos.
   </p>
 </header>
 
+<section>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Idiomas</h3>
+      <p>Inglés, francés, alemán, italiano, portugués y chino.</p>
+      <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Cocina Avanzada</h3>
+      <p>Formación culinaria profesional.</p>
+      <a href="https://chatgpt.com/g/g-69685d02115881919b6cf3a7c1ee0b0a-tutor-demostrativo-de-cocina-avanzada" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Nutrición Inteligente</h3>
+      <p>Alimentación y salud basada en conocimiento.</p>
+      <a href="https://chatgpt.com/g/g-69685ea4ef848191b14cf3efcfedff3d-tutor-demostrativo-de-nutricion-inteligente" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Curso Avanzado de IA</h3>
+      <p>Uso práctico de inteligencia artificial.</p>
+      <a href="https://chatgpt.com/g/g-6968603712bc8191a82855fe7d3efc5a-tutor-demostrativo-del-curso-de-ia" target="_blank">
+        Ver tutor demostrativo
+      </a>
+    </div>
+
+  </div>
+</section>
+
 <footer>
-  MagicBank Academy · Plataforma DEMO · Sin acceso a tutores reales
+  MagicBank Academy · Plataforma DEMO · Sin tutores reales
 </footer>
 
 </body>
