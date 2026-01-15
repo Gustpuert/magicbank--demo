@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank Academy | DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+      --gris: #CFCFD6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--dorado);
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--gris);
+      font-size: 15px;
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      color: var(--dorado);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      text-decoration: none;
+      background-color: var(--dorado);
+      color: #1A1A1A;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--gris);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MagicBank Academy · DEMO</h1>
+  <p>
+    Explora los cursos de MagicBank Academy mediante tutores demostrativos.
+    Conoce de qué trata cada curso y decide con información clara antes de comprar.
+  </p>
+</header>
+
+<section class="grid">
+
+  <!-- IDIOMAS (TODOS → MISMO TUTOR DEMO) -->
+
+  <div class="card">
+    <h2>Curso de Inglés</h2>
+    <p>Aprende inglés desde nivel inicial hasta avanzado.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso de Francés</h2>
+    <p>Explora el idioma francés con enfoque práctico.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso de Portugués</h2>
+    <p>Aprende portugués aplicado a contextos reales.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso de Alemán</h2>
+    <p>Introducción al idioma alemán con tutor guía.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso de Italiano</h2>
+    <p>Aprende italiano paso a paso con acompañamiento.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso de Chino</h2>
+    <p>Introducción al chino mandarín con tutor demostrativo.</p>
+    <a href="https://chatgpt.com/g/g-69672cfa6334819187814f59e45da125-tutor-de-idiomas" target="_blank">
+      Tutor demostrativo de idiomas
+    </a>
+  </div>
+
+  <!-- OTROS CURSOS -->
+
+  <div class="card">
+    <h2>Cocina Avanzada</h2>
+    <p>Técnicas culinarias profesionales y cocina creativa.</p>
+    <a href="https://chatgpt.com/g/g-69685d02115881919b6cf3a7c1ee0b0a-tutor-demostrativo-de-cocina-avanzada" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Nutrición Inteligente</h2>
+    <p>Alimentación consciente, saludable y aplicada.</p>
+    <a href="https://chatgpt.com/g/g-69685ea4ef848191b14cf3efcfedff3d-tutor-demostrativo-de-nutricion-inteligente" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <div class="card">
+    <h2>Curso Avanzado de IA (ChatGPT)</h2>
+    <p>Uso profesional de inteligencia artificial y ChatGPT.</p>
+    <a href="https://chatgpt.com/g/g-6968603712bc8191a82855fe7d3efc5a-tutor-demostrativo-del-curso-de-ia" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  MagicBank Academy · Plataforma DEMO · Sin tutores reales
+</footer>
+
+</body>
+</html>
