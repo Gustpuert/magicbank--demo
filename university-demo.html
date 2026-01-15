@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank University | DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+      --gris: #CFCFD6;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 40px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--dorado);
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--gris);
+      font-size: 15px;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      max-width: 1100px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 26px;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card h2 {
+      color: var(--dorado);
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--gris);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      text-decoration: none;
+      background-color: var(--dorado);
+      color: #1A1A1A;
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: var(--gris);
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>MagicBank University · DEMO</h1>
+  <p>
+    Explora las facultades de MagicBank University mediante tutores demostrativos.
+    Conoce qué aprenderás y cómo funcionan los programas antes de acceder a los tutores reales.
+  </p>
+</header>
+
+<section class="grid">
+
+  <!-- Administración y Negocios -->
+  <div class="card">
+    <h2>Administración y Negocios</h2>
+    <p>Gestión, liderazgo, finanzas y modelos de negocio.</p>
+    <a href="https://chatgpt.com/g/g-696695cb43b881919fb7f68b33994341-superadministrador-tutor-pro" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <!-- Derecho -->
+  <div class="card">
+    <h2>Derecho</h2>
+    <p>Fundamentos jurídicos, práctica legal y campos profesionales.</p>
+    <a href="https://chatgpt.com/g/g-696699828448819189b8d55c1ec914c7-tutor-de-derecho-abogadus-tutor-pro" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <!-- Contaduría -->
+  <div class="card">
+    <h2>Contaduría</h2>
+    <p>Contabilidad, gestión fiscal y análisis financiero.</p>
+    <a href="https://chatgpt.com/g/g-6966a3b3f8f881919cc1030e8f9f81d7-tutor-de-contaduria-supercontador-tutor-pro" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <!-- Marketing Digital -->
+  <div class="card">
+    <h2>Marketing Digital</h2>
+    <p>Publicidad digital, embudos, posicionamiento y ventas online.</p>
+    <a href="https://chatgpt.com/g/g-6966a4b9cf208191b7cba7845a3afbc9-tutor-de-marketing-supermarketer" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+  <!-- Desarrollo de Software -->
+  <div class="card">
+    <h2>Desarrollo de Software</h2>
+    <p>Programación, automatización y soluciones tecnológicas.</p>
+    <a href="https://chatgpt.com/g/g-6966a44de3a08191ad6c8c0d5a05d806-tutor-de-desarrollo-de-software-superdesarrollador" target="_blank">
+      Tutor demostrativo
+    </a>
+  </div>
+
+</section>
+
+<footer>
+  MagicBank University · Plataforma DEMO · Sin tutores reales
+</footer>
+
+</body>
+</html>
