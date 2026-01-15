@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank | Acceso DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+      --gris: #CFCFD6;
+      --rojo: #C0392B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 42px;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--dorado);
+      margin-bottom: 14px;
+      font-size: 26px;
+    }
+
+    p {
+      color: var(--gris);
+      font-size: 14.5px;
+      margin-bottom: 26px;
+      line-height: 1.5;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      margin-bottom: 14px;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--dorado);
+      color: #1A1A1A;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: var(--rojo);
+      margin-top: 12px;
+      font-size: 13px;
+      display: none;
+    }
+
+    .nota {
+      margin-top: 18px;
+      font-size: 12.5px;
+      color: var(--gris);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="panel">
+  <h1>Explora MagicBank</h1>
+
+  <p>
+    Acceso libre a la plataforma demostrativa de MagicBank.<br>
+    Conoce nuestros tutores, facultades y cursos antes de decidir.
+  </p>
+
+  <input
+    type="email"
+    id="email"
+    placeholder="Correo electrónico"
+    autocomplete="email"
+    required
+  >
+
+  <button onclick="ingresar()">Entrar a la DEMO</button>
+
+  <div id="error" class="error">
+    Por favor, ingresa un correo electrónico válido.
+  </div>
+
+  <div class="nota">
+    Acceso demostrativo · Sin tutores reales · Sin límites de tiempo
+  </div>
+</div>
+
+<script>
+  function emailValido(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  function ingresar() {
+    const emailInput = document.getElementById("email");
+    const error = document.getElementById("error");
+    const email = emailInput.value.trim();
+
+    if (!emailValido(email)) {
+      error.style.display = "block";
+      return;
+    }
+
+    error.style.display = "none";
+
+    // Registro local (canónico – sin backend aún)
+    localStorage.setItem("mb_demo_email", email);
+    localStorage.setItem("mb_demo_date", new Date().toISOString());
+
+    // Redirección al recorrido DEMO
+    window.location.href = "university-demo.html";
+  }
+</script>
+
+</body>
+</html>
