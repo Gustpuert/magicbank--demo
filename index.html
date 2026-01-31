@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MagicBank | Guided Tour DEMO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --azul-profundo: #070C2A;
+      --dorado: #D6B15A;
+      --blanco: #FFFFFF;
+      --gris: #CFCFD6;
+      --rojo: #C0392B;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--azul-profundo);
+      color: var(--blanco);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .home-link {
+      position: fixed;
+      top: 16px;
+      left: 16px;
+      color: var(--dorado);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .panel {
+      background: rgba(255,255,255,0.05);
+      border-radius: 18px;
+      padding: 42px;
+      width: 100%;
+      max-width: 560px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.55);
+      text-align: center;
+    }
+
+    h1 {
+      color: var(--dorado);
+      margin-bottom: 14px;
+      font-size: 26px;
+    }
+
+    p {
+      color: var(--gris);
+      font-size: 14.5px;
+      margin-bottom: 22px;
+      line-height: 1.5;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background-color: var(--dorado);
+      color: #1A1A1A;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .error {
+      color: var(--rojo);
+      margin-top: 12px;
+      font-size: 13px;
+      display: none;
+    }
+
+    .menu-demo {
+      margin-top: 34px;
+      display: none;
+      text-align: left;
+    }
+
+    .menu-demo h2 {
+      text-align: center;
+      color: var(--dorado);
+      font-size: 18px;
+      margin-bottom: 18px;
+    }
+
+    .menu-demo a {
+      display: block;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      text-decoration: none;
+      color: var(--blanco);
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .menu-demo a span {
+      display: block;
+      font-size: 13px;
+      color: var(--gris);
+      font-weight: 400;
+      margin-top: 4px;
+    }
+
+    .menu-demo a:hover {
+      background: rgba(255,255,255,0.14);
+    }
+
+    .nota {
+      margin-top: 22px;
+      font-size: 12.5px;
+      color: var(--gris);
+      opacity: 0.9;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+<a class="home-link" href="https://magicbank.org">Home</a>
+
+<div class="panel">
+  <h1>MagicBank Guided Tour</h1>
+
+  <p>
+    Enter your email to access the guided demo of the MagicBank ecosystem.
+  </p>
+
+  <p>
+    Ingresa tu correo para acceder a la visita guiada del ecosistema MagicBank.
+  </p>
+
+  <input type="email" id="email" placeholder="Email address / Correo electrónico">
+
+  <button onclick="ingresar()">Enter / Ingresar</button>
+
+  <div id="error" class="error">
+    Please enter a valid email address / Ingresa un correo válido
+  </div>
+
+  <div id="menuDemo" class="menu-demo">
+    <h2>Select an area / Selecciona un área</h2>
+
+    <a href="https://gustpuert.github.io/magicbank--demo/university-demo.html">
+      🎓 MagicBank University · DEMO
+      <span>University programs and academic tutors</span>
+      <span>Facultades y tutores académicos</span>
+    </a>
+
+    <a href="https://gustpuert.github.io/magicbank--demo/academy-demo.html">
+      📘 MagicBank Academy · DEMO
+      <span>Practical courses and applied learning</span>
+      <span>Cursos prácticos y formación aplicada</span>
+    </a>
+
+    <a href="https://gustpuert.github.io/magicbank--demo/fabrica-tutores.html">
+      🏭 Tutor Factory · DEMO
+      <span>Professional Assistant Tutors (TAP)</span>
+      <span>Tutores Asistentes Profesionales</span>
+    </a>
+  </div>
+
+  <div class="nota">
+    Demo environment · No real access · Plataforma demostrativa
+  </div>
+</div>
+
+<script>
+function emailValido(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function ingresar() {
+  const email = document.getElementById("email").value.trim();
+  const error = document.getElementById("error");
+  const menu = document.getElementById("menuDemo");
+
+  if (!emailValido(email)) {
+    error.style.display = "block";
+    return;
+  }
+
+  error.style.display = "none";
+  localStorage.setItem("mb_demo_email", email);
+  menu.style.display = "block";
+}
+</script>
+
+</body>
+</html>
